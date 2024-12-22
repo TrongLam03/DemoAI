@@ -1,0 +1,81 @@
+/* Tổng thể */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font chữ hiện đại và dễ đọc */
+    background-color: #e9ecef; /* Nền sáng nhưng không quá chói */
+    color: #343a40; /* Màu chữ tối cho sự tương phản */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Tiêu đề chính */
+h2 {
+    color: #007bff; /* Màu xanh đặc trưng */
+    font-size: 36px; /* Kích thước lớn */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600; /* Đậm để nổi bật */
+}
+
+/* Hộp form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background: white; /* Nền trắng để nổi bật các phần tử */
+    border-radius: 15px; /* Bo góc */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ sắc nét */
+}
+
+/* Input file */
+input[type="file"] {
+    padding: 12px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 2px solid #007bff; /* Viền màu xanh */
+    border-radius: 10px; /* Bo góc */
+    width: 100%; /* Chiều rộng đầy đủ */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+input[type="file"]:hover {
+    border-color: #0056b3; /* Thay đổi màu viền khi hover */
+}
+
+/* Nút bấm */
+button {
+    padding: 12px 30px;
+    background: #007bff; /* Nền nút màu xanh */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Không viền */
+    border-radius: 10px; /* Bo góc */
+    font-size: 18px; /* Kích thước chữ lớn hơn */
+    cursor: pointer; /* Con trỏ tay */
+    transition: background 0.3s, transform 0.2s; /* Hiệu ứng chuyển đổi */
+}
+
+button:hover {
+    background: #0056b3; /* Màu nền khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nhấc nút lên */
+}
+
+/* Tiêu đề kết quả */
+h3 {
+    color: #007bff; /* Màu xanh đặc trưng */
+    font-size: 24px; /* Kích thước chữ */
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Hình ảnh kết quả */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 15px; /* Bo góc cho hình ảnh */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ cho hình ảnh */
+}

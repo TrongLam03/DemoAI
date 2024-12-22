@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Segmentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #555;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Segmentation</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="file">Upload Image:</label>
+        <input type="file" id="file" name="file" accept="image/*" required>
+
+        <label for="method">Chọn Phương Pháp</label>
+        <select name="method" id="method" required>
+            <option value="GrabCut">GrabCut</option>
+            <option value="Watershed">Watershed</option>
+            <option value="GoogleVision">Google Vision</option>
+        </select>
+
+        <button type="submit">Gửi ảnh </button>
+    </form>
+
+    <div class="result">
+        {% if result %}
+            <h2>Result - {{ method }}</h2>
+            {% if method == "GoogleVision" %}
+                <p>{{ result }}</p>
+            {% else %}
+                <img src="{{ result }}" alt="Processed Image">
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
